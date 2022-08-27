@@ -438,6 +438,8 @@ ol {
 
 /* =====================ПІДВАЛ======================= */
 .footer-page {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--accent-background-color);
 }
 .footer-page-container{
@@ -447,8 +449,7 @@ ol {
 /* ============Перший блок============= */
 .footer-container{
   display: flex;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  
 }
 /*================ Логотип футера================= */
 .footer-address-container {
