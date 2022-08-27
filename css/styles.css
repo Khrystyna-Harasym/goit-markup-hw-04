@@ -34,7 +34,8 @@
 .menu-link {
   color: inherit;
 }
-.feature-title {
+.feature-title,
+.title-footer {
   font-size: inherit;
 }
 img {
@@ -90,8 +91,12 @@ ol {
   display: flex;
   justify-content: center;
 }
-
-/* ======================Верхня лінія=================== */
+.subtitle{
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+/* ======================ВЕРХНЯ ЛІНІЯ=================== */
 .top-line {
   border-bottom: 1px solid #ececec;
   padding-top: 24px;
@@ -113,6 +118,8 @@ ol {
 .accent {
   color: var(--accent-color);
 }
+/* ====================/Логотип========================= */
+
 /* =======================Навігація====================== */
 
 .page-nav {
@@ -126,6 +133,8 @@ ol {
 .contact-menu {
   display: flex;
 }
+/* =======================/Навігація====================== */
+
 /* =================Посилання===================== */
 .menu-link {
   font-weight: 500;
@@ -145,6 +154,8 @@ ol {
 .menu .link.current {
   color: var(--accent-color);
 }
+/* =================/Посилання===================== */
+
 /* =================Контакти================== */
 .mail {
   font-weight: 500;
@@ -165,15 +176,37 @@ ol {
 .mail:focus {
   color: var(--accent-color);
 }
+.contact-list{
+  display: flex;
+  align-items: center;
+}
+.link-icon{
+  display: flex;
+  align-items: center;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  
+}
+.contact-icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
 
+.link-icon:hover .contact-icon,
+.link-icon:focus .contact-icon{
+  fill: var(--accent-color);
+}
 .contact-number:hover,
 .contact-number:focus {
   color: var(--accent-color);
 }
+/* =================/Контакти================== */
 
-/* ==============Основний контент================== */
+/* ======================/ВЕРХНЯ ЛІНІЯ=================== */
 
-/* Герой */
+/* =====================ОСНОВНИЙ КОНТЕНТ======================== */
+
+/*=================== Герой===================== */
 .main-hero-container {
   text-align: center;
 }
@@ -181,7 +214,18 @@ ol {
 .main-hero {
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: var(--accent-background-color);
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #c4c4c4;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/hero-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .main-title {
   font-weight: 900;
@@ -197,6 +241,7 @@ ol {
   margin-right: auto;
   margin-bottom: 30px;
 }
+/*=================== /Герой===================== */
 
 /* ================Кнопки===================== */
 
@@ -242,6 +287,8 @@ ol {
   border: transparent;
   border-radius: 4px;
 }
+/* ==========================/Кнопки===================== */
+
 /*======================== Особливості====================*/
 
 .feature-container {
@@ -255,11 +302,16 @@ ol {
 .feature-item {
   flex-basis: calc((100%-90) / 4);
 }
+.feature-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--secondary-background-color);
+}
 
 .feature-title {
-  font-weight: 700;
-  line-height: 1.14;
-  text-transform: uppercase;
   margin-bottom: 10px;
 }
 
@@ -267,6 +319,7 @@ ol {
   line-height: 1.71;
   color: var(--secondary-text-color-theme-light);
 }
+/*======================== /Особливості====================*/
 
 /* ==========Чим ми займаємось======== */
 
@@ -284,6 +337,7 @@ ol {
   display: flex;
   justify-content: center;
 }
+/* ===============/Чим ми займаємось======== */
 
 /*============= Наша команда============ */
 .team-section {
@@ -295,10 +349,10 @@ ol {
 }
 
 .team-item {
-
   flex-basis: calc((100% - 90px) / 4);
-  background: var(--primary-background-color);
+  background-color: var(--primary-background-color);
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .team-name {
   padding-top: 30px;
@@ -315,20 +369,92 @@ ol {
   font-size: 16px;
   line-height: 1.19;
   color: var(--secondary-text-color-theme-light);
+  margin-bottom: 16px;
 }
 .desc-card {
   text-align: center;
 }
-/* =====================Підвал======================= */
+/* Посилання на соц мережі */
+.social-list{
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
+.social-item-link{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 44px;
+ height: 44px;
+ border-radius: 50%;
+ 
+}
+.social-list-icon{
+  fill:#AFB1B8;
+}
+.social-item-link:hover,
+.social-item-link:focus{
+  background-color: var(--accent-color);
+  
+}
+.social-item-link:hover .social-list-icon,
+.social-item-link:focus .social-list-icon{
+  fill: #ffffff;
+  
+}
+/*====================== /Наша команда=============== */
+
+/* =================Постійні клієнти================= */
+.customer-list{
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+}
+
+.customer-item-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+}
+.customer-list-icon{
+  fill:#AFB1B8;
+}
+.customer-item-link:hover,
+.customer-item-link:focus{
+  border: 1px solid var(--accent-color);
+}
+.customer-item-link:hover .customer-list-icon,
+.customer-item-link:focus .customer-list-icon{
+  fill: var(--accent-color);
+  
+}
+/* =================/Постійні клієнти================= */
+
+/* =====================/ОСНОВНИЙ КОНТЕНТ======================== */
+
+/* =====================ПІДВАЛ======================= */
 .footer-page {
-  padding-top: 60px;
-  padding-bottom: 60px;
   background-color: var(--accent-background-color);
 }
+.footer-page-container{
+  display: flex;
+  align-items: baseline;
+}
+/* ============Перший блок============= */
+.footer-container{
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 /*================ Логотип футера================= */
-.footer-page-container {
+.footer-address-container {
   display: flex;
   flex-direction: column;
+  margin-right: 70px;
 }
 
 .logo-footer {
@@ -339,6 +465,7 @@ ol {
   color: var(--light-logo-color);
   margin-bottom: 20px;
 }
+/*================/ Логотип футера================= */
 
 /* ===============Адреса====================== */
 
@@ -350,22 +477,61 @@ ol {
   line-height: 1.71;
   color: var(--main-text-color-theme-dark);
 }
+/* ===============/Адреса====================== */
+
 /* ===============Стилізація посилань==================== */
 .footer {
   font-style: normal;
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
 }
+/* ===============/Стилізація посилань==================== */
+/* ========================/Перший блок====================== */
+
+/* ===================Другий блок========================= */
+.footer-social-container{
+  width: 206px;
+}
+.title-footer{
+   margin-bottom: 21px;
+  color: #ffffff;
+}
+.footer-social-list{
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
+.footer-social-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color:rgba(255, 255, 255, 0.1);;
+
+}
+.footer-social-icon{
+  fill:#ffffff;
+}
+.footer-social-link:hover,
+.footer-social-link:focus{
+ background-color: var(--accent-color);
+}
+/* =====================/Другий блок============================== */
+
+/* =====================/ПІДВАЛ======================= */
 
 /* ======================Портфоліо проєкт================== */
 
-/* ========Навігаційні кнопки======== */
+/* =================Навігаційні кнопки============== */
 .nav-btn-container {
   display: flex;
   justify-content: center;
   gap: 8px;
   margin-bottom: 50px;
 }
+/* =================/Навігаційні кнопки============== */
 
 /* =============Список проєктів==============  */
 .project-title {
@@ -374,6 +540,7 @@ ol {
   line-height: 2;
   letter-spacing: 0.06em;
   margin-bottom: 4px;
+  color: var(--primary-text--color-theme-light);
 }
 .project-desc {
   font-size: 16px;
@@ -386,19 +553,25 @@ ol {
   gap: 30px;
 }
 .project-list {
-  
   flex-basis: calc((100% - 60px) / 3);
+}
+.project-item-link{
+  display: block;
+}
+.project-item-link:hover,
+.project-item-link:focus {
+  
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 .project-card {
   border-top: 0;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
-}
-
-.project-card {
   padding-top: 20px;
   padding-right: 24px;
   padding-bottom: 20px;
   padding-left: 24px;
 }
+/* ======================/Список проєктів==============  */
